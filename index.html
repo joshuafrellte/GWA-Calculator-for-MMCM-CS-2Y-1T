@@ -5,14 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>CS 2Y 1T GWA Calculator</h1>
-    <div>
-        <div>
-            <label></label>
-            <input>
+    <div id="appArea">
+        <h1>CS 2Y 1T GWA Calculator</h1>
+        <div id="gradeForm">
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Data Structures and Algorithms">CS106</label>
+                <input class="inputs">
+            </div>
+
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Data Structures and Algorithms (Lab)">CS106L</label>
+                <input class="inputs" type="number">
+            </div>
+
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Environmental Science">ENV075</label>
+                <input class="inputs" type="number">
+            </div>
+
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Logic and Critical Thinking">HUM021</label>
+                <input class="inputs" type="number">
+            </div>
+
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Mathematics in The Modern World">MATH035</label>
+                <input class="inputs" type="number">
+            </div>
+
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Object Oriented Programming">IT102</label>
+                <input class="inputs" type="number">
+            </div>
+
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Object Oriented Programming (Lab)">IT102L</label>
+                <input class="inputs" type="number">
+            </div>
+
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Physical Activities Towards Health and Fitness 4">PE014</label>
+                <input class="inputs" type="number">
+            </div>
+
+            <div class="subjectForms">
+                <label class="subjectLabels" title="Programming Languages">CS121</label>
+                <input class="inputs" type="number">
+            </div>
         </div>
+        
+        <button id="calculateBtn">Calculate</button>
+
+        <h2>Final Grade</h2>
+        <label id="finalGradeLbl">[final grade placeholder]</label>
     </div>
     <script src="script.js"></script>
 </body>
