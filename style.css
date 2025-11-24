@@ -13,8 +13,7 @@ body {
     border: 8px solid rgb(255, 255, 255);
     border-radius: 25px; 
     box-shadow: 0 0 50px white, inset 0 0 33px white;
-    padding: auto;
-    padding-top: 33px;
+    padding: 33px;
 }
 
 #gradeForm {
@@ -111,7 +110,7 @@ h2 {
     display: inline-block;
     font-size: 2em;
     font-weight: bolder;
-    color: rgb(36, 49, 150);
+    color: rgba(36, 49, 150, 0.935);
     margin-bottom: 50px;
     padding: 3px 15px;
     background-color: white;
@@ -122,8 +121,8 @@ h2 {
 }
 
 #finalGrade:hover {
-    color: rgb(189, 2, 189);
-    box-shadow: 0 0 10px rgb(255, 0, 217);
+    color: rgb(5, 23, 160);
+    box-shadow: 0 0 10px rgb(6, 26, 179);
     transform: scale(1.075);
 }
 
