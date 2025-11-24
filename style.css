@@ -5,23 +5,16 @@ body {
     text-shadow: 0 0 2px;
     text-align: center;
     display: block;
-}
-
-h1 {
-    font-weight: 1000;
-    transition: 0.2s ease;
-}
-
-h1:hover {
-    transform: scale(1.1);
+    margin: 0;
 }
 
 #appArea {
     background: linear-gradient(135deg,rgb(252, 102, 102) 0%, rgba(68, 62, 248, 0.97) 100%);
     border: 8px solid rgb(255, 255, 255);
-    border-radius: 100px;
+    border-radius: 25px; 
     box-shadow: 0 0 50px white, inset 0 0 33px white;
-    padding: 100px;
+    padding: auto;
+    padding-top: 33px;
 }
 
 #gradeForm {
@@ -31,8 +24,18 @@ h1:hover {
     margin: 5px;
 }
 
+h1 {
+    font-size: 26px;
+    font-weight: 1000;
+    transition: 0.2s ease;
+}
+
+h1:hover {
+    transform: scale(1.1);
+}
+
 #gradeForm label {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -83,7 +86,7 @@ h1:hover {
     margin: 20px;
     padding: 14px 19px;
     cursor: pointer;
-    transition: 0.15s ease;
+    transition: 0.1s ease;
 }
 
 #calculateBtn:hover,  #calculateBtn:focus {
@@ -138,11 +141,12 @@ h2 {
         left: 50%;
         transform: translate(-50%,-50%); 
         max-width: 700px;
+        padding: 100px;
+        border-radius: 100px;
     }
 }
 
 @media screen and (min-width: 1000px) {
-
     #appArea {
         display: flex;
         justify-content: space-evenly;
