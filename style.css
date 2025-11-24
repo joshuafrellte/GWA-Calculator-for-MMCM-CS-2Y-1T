@@ -12,8 +12,17 @@ body {
     background: linear-gradient(135deg,rgb(252, 102, 102) 0%, rgba(68, 62, 248, 0.97) 100%);
     border: 8px solid rgb(255, 255, 255);
     border-radius: 25px; 
-    box-shadow: 0 0 50px white, inset 0 0 33px white;
     padding: 33px;
+    animation: breathe 2s ease-out infinite alternate;
+}
+
+@keyframes breathe {
+    0% {
+        box-shadow: 0 0 20px white, inset 0 0 20px white;
+    }
+    100% {
+        box-shadow: 0 0 50px white, inset 0 0 50px white;
+    }
 }
 
 #gradeForm {
@@ -97,7 +106,7 @@ h1:hover {
 }
 
 #calculateBtn:active {
-    color:azure;
+    color: azure;
     background-color: rgb(18, 29, 143);
     text-shadow: none;
     box-shadow: 0 0 8px rgb(255, 255, 255);
