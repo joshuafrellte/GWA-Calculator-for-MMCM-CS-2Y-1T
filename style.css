@@ -81,6 +81,7 @@ h1:hover {
     border: none;
     border-radius: 33px;
     background-color: rgba(12, 25, 165, 0.686);
+    box-shadow: 0 0 8px rgba(12, 25, 165, 0.686);
     color: rgb(255, 255, 255);
     margin: 20px;
     padding: 14px 19px;
@@ -154,6 +155,11 @@ h2 {
         max-width: 1500px;
     }
     h1 {
+        background-color: rgba(11, 26, 191, 0.26);
+        padding: 40px 5px;
+        border-radius: 50px;
+        box-shadow: 0 0 12px rgba(12, 25, 165, 0.262);
         width: 250px;
+        margin-right: 10px;
     }
 }
