@@ -73,7 +73,8 @@ h1:hover {
 #gradeForm div input {
     font-size: 24px;
     font-family: 'Montserrat';
-    font-weight: 600;
+    font-weight: 700;
+    color:rgb(0, 5, 45);
     text-align: center;
     border: none;
     border-radius: 0 25px 25px 0;
@@ -106,12 +107,13 @@ h1:hover {
     margin-bottom: 12px;
     padding: 14px 19px;
     cursor: pointer;
-    transition: 0.1s ease;
-}
+    transition: 0.15s ease;
+}       
 
-#calculateBtn:hover,  #calculateBtn:focus {
+#calculateBtn:hover {
     text-shadow: 0 0 1px white;
     box-shadow: 0 0 16px rgb(255, 255, 255);
+    outline: 4px solid white;
     transform: scale(1.075);
 }
 
@@ -120,7 +122,7 @@ h1:hover {
     background-color: rgb(18, 29, 143);
     text-shadow: none;
     box-shadow: 0 0 8px rgb(255, 255, 255);
-    transform: scale(1);
+    transform: scale(1.033);
 }
 
 h2 {
@@ -141,9 +143,9 @@ h2 {
     transition: 0.15s ease;
 }
 
-#finalGrade:hover {
+#finalGradeLbl:hover {
     color: rgb(5, 23, 160);
-    box-shadow: 0 0 10px rgb(6, 26, 179);
+    box-shadow: 0 0 12px rgb(6, 26, 179);
     transform: scale(1.075);
 }
 

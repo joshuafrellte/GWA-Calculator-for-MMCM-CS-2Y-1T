@@ -4,52 +4,50 @@ inputs.forEach(input => {
     input.min = '1.00';
     input.max = '3.00';
     input.step = '0.25';
+    input.maxLength = 4;
+    input.addEventListener('change', function() {
+        this.value = parseFloat(this.value).toFixed(2);
+    })
 });
 
-const finalGradeLbl = document.getElementById('finalGradeLbl');
-const calculateBtn = document.getElementById('calculateBtn');
+const courses = [
+    { id: 'CS106',   units: 2 },
+    { id: 'CS106L',  units: 1 },
+    { id: 'ENV075',  units: 3 },
+    { id: 'HUM021',  units: 3 },
+    { id: 'MATH035', units: 3 },
+    { id: 'IT102',   units: 2 },
+    { id: 'IT102L',  units: 1 },
+    { id: 'PE014',   units: 2 },
+    { id: 'CS121',   units: 3 },
+];
 
-const CS106 = document.getElementById('CS106');
-const CS106L = document.getElementById('CS106L');
-const ENV075 = document.getElementById('ENV075');
-const HUM021 = document.getElementById('HUM021');
-const MATH035 = document.getElementById('MATH035');
-const IT102 = document.getElementById('IT102');
-const IT102L = document.getElementById('IT102L');
-const PE014 = document.getElementById('PE014');
-const CS121 = document.getElementById('CS121');
+const calculateBtn = document.getElementById('calculateBtn');
+const finalGradeLbl = document.getElementById('finalGradeLbl')
+
+document.addEventListener("keypress", function(event) {
+    if(event.key === "Enter") {
+        calculateBtn.onclick();
+    }
+})
 
 calculateBtn.onclick = function() {
-    const CS106_GRADE = CS106.value;
-    const CS106L_GRADE = CS106L.value;
-    const ENV075_GRADE = ENV075.value;
-    const HUM021_GRADE = HUM021.value;
-    const MATH035_GRADE = MATH035.value;
-    const IT102_GRADE = IT102.value;
-    const IT102L_GRADE = IT102L.value;
-    const PE014_GRADE = PE014.value;
-    const CS121_GRADE = CS121.value;
-
-    const courses = [
-        { code: 'CS106', grade: CS106_GRADE, units: 2 },
-        { code: 'CS106L', grade: CS106L_GRADE, units: 1 },
-        { code: 'ENV075', grade: ENV075_GRADE, units: 3 },
-        { code: 'HUM021', grade: HUM021_GRADE, units: 3 },
-        { code: 'MATH035', grade: MATH035_GRADE, units: 3 },
-        { code: 'IT102', grade: IT102_GRADE, units: 2 },
-        { code: 'IT102L', grade: IT102L_GRADE, units: 1 },
-        { code: 'PE014', grade: PE014_GRADE, units: 2 },
-        { code: 'CS121', grade: CS121_GRADE, units: 3 },
-    ];
-
     let totalGrade = 0;
     let totalUnits = 0;
     courses.forEach((course) => {
-        totalGrade += course.grade * course.units;
+        const grade = parseFloat(document.getElementById(course.id).value) || 1;
+        totalGrade += grade * course.units;
         totalUnits += course.units;
     });
+
     let finalGrade = totalGrade / totalUnits;
-    finalGradeLbl.textContent = finalGrade.toFixed(4);
+    const hasEmptyInput = Array.from(inputs).some(input => input.value === '');
+    if (hasEmptyInput) {
+        alert("Fill all fields before calculating!");
+    }
+    else {
+        finalGradeLbl.textContent = finalGrade.toFixed(4);
+    }
 }
 
 
