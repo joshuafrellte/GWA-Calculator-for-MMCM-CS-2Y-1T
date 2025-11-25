@@ -127,7 +127,7 @@ h2 {
     margin: 15px 0;
 }
 
-#finalGrade {
+#finalGradeLbl {
     display: inline-block;
     font-size: 2em;
     font-weight: bolder;
