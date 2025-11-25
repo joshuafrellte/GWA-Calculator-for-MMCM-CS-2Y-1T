@@ -47,7 +47,12 @@ calculateBtn.onclick = function() {
     }
     else {
         finalGradeLbl.textContent = finalGrade.toFixed(4);
-    }
+        finalGradeLbl.classList.add('animate');
+        setTimeout(() => {
+            finalGradeLbl.classList.remove('animate');
+        }, 800);
+    } 
+    
 }
 
 
